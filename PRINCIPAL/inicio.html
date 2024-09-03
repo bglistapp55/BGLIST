@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../CSS/inicio.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.0.0/index.global.min.css" rel="stylesheet" />
+    <title>BG LIST APP</title>
+</head>
+<body>
+    <div class="contenedor__pagina">
+        <aside class="aside">
+            <div class="aside__arriba">
+                    <a href="#" class="aside__arriba-perfil">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="aside__arriba-perfil-imagen" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                        </svg>
+                        <p class="aside__arriba-perfil-nombre">BG Kumdam tanaka</p>
+                    </a>
+                <div class="aside__arriba-buscador" data-bs-toggle="modal" data-bs-target="#buscar">
+                    <span class="material-symbols-outlined aside__arriba-buscador-imagen">
+                        travel_explore
+                    </span>
+                    <p class="aside__enlace-p">
+                        Buscar
+                    </p>
+                </div>
+            </div>
+            <div class="aside__enlaces">
+                <div class="aside__enlace" data-bs-toggle="modal" data-bs-target="#añadirTareaModal">
+                    <span class="material-symbols-outlined aside__enlace-icono">
+                        night_sight_max
+                    </span>
+                    <p class="aside__enlace-p">
+                        Añadir tarea
+                    </p>
+                </div>
+                <div class="aside__enlace">
+                    <span class="material-symbols-outlined aside__enlace-icono">
+                        partly_cloudy_day
+                    </span>
+                    <p class="aside__enlace-p">
+                        Hoy
+                    </p>
+                </div>
+                <div class="aside__enlace">
+                    <span class="material-symbols-outlined aside__enlace-icono">
+                        rocket_launch
+                    </span>
+                    <p class="aside__enlace-p">
+                        Próximo
+                    </p>
+                </div>
+                <div class="aside__enlace" data-bs-toggle="modal" data-bs-target="#calendarioModal">
+                    <span class="material-symbols-outlined aside__enlace-icono">
+                        early_on
+                    </span>
+                    <p class="aside__enlace-p">
+                        Calendario
+                    </p>
+                </div>
+                <div class="aside__enlace">
+                    <span class="material-symbols-outlined aside__enlace-icono">
+                        public
+                    </span>
+                    <p class="aside__enlace-p">
+                        Proyectos
+                    </p>
+                </div>
+                <div class="aside__enlace">
+                    <span class="material-symbols-outlined aside__enlace-icono">
+                        hotel_class
+                    </span>
+                    <p class="aside__enlace-p">
+                        Historial
+                    </p>
+                </div>
+            </div>
+            <div class="aside__abajo">        
+                <a class="aside__abajo-cerrar_sesion" href="hola.html">
+                        <span class="material-symbols-outlined aside__cerrar_sesion-icono">
+                            bedtime_off
+                        </span>
+                    <div class="aside__cerrar_sesion-p">Cerrar Sesión</div>
+                </a>
+                <div class="aside__abajo-logo">
+                    <div class="aside__logo-spin">
+                        <span class="material-symbols-outlined">
+                            vpn_lock
+                        </span>
+                        <P class="aside__logo-spin-p">
+                            BG LIST
+                        </P>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+
+
+
+
+
+        <main class="main">
+
+
+            <section class="main__calendario">
+                <div id="calendar"></div>
+            </section>
+            <section class="main__recordatorios">
+                <div class="recordatiors__contenedor"></div>
+            </section>
+            <section class="main__estadistica">
+                <div class="estadistica__contenedor"></div>
+            </section>
+            <section class="main__categorias">
+                <!-- <p class="main__categorias-p">
+                    MIS CATEGORIAS     
+                </p> -->
+                <div class="main__categorias-tarjeta">
+                    <h2 class="categorias__tarjeta-h2">
+                        ESTUDIO
+                    </h2>
+                    <p class="categorias__tarjeta-p">
+                        descripcion de la categoria relacionada al estudio y la vagez siqsi
+                    </p>
+                    <div class="categorias__tarjeta-botones">
+                        <button class="categorias__tarjeta-boton">
+                            eliminar
+                        </button><button class="categorias__tarjeta-boton">
+                            editar
+                        </button><button class="categorias__tarjeta-boton">
+                            ver tareas
+                        </button>
+                    </div>
+
+                </div>
+                <div class="main__categorias-tarjeta">
+                    <h2 class="categorias__tarjeta-h2">
+                        TRABAJO
+                    </h2>
+                    <p class="categorias__tarjeta-p">
+                        descripcion de la categoria relacionada al trabajo
+                    </p>
+                    <div class="categorias__tarjeta-botones">
+                        <button class="categorias__tarjeta-boton">
+                            eliminar
+                        </button><button class="categorias__tarjeta-boton">
+                            editar
+                        </button><button class="categorias__tarjeta-boton">
+                            ver tareas
+                        </button>
+                    </div>
+                </div>
+                <div class="main__categorias-tarjeta">
+                    <h2 class="categorias__tarjeta-h2">
+                        Nombre de Categoria
+                    </h2>
+                    <p class="categorias__tarjeta-p">
+                        descripcion de la categoria en la cual se detalla un poco mas sobre que funcion va a tener
+                    </p>
+                    <div class="categorias__tarjeta-botones">
+                        <button class="categorias__tarjeta-boton">
+                            eliminar
+                        </button><button class="categorias__tarjeta-boton">
+                            editar
+                        </button><button class="categorias__tarjeta-boton">
+                            ver tareas
+                        </button>
+                    </div>
+                </div>
+                <div class="main__categorias-tarjeta">
+                    <h2 class="categorias__tarjeta-h2">
+                        Nombre de Categoria
+                    </h2>
+                    <p class="categorias__tarjeta-p">
+                        descripcion de la categoria en la cual se detalla un poco mas sobre que funcion va a tener
+                    </p>
+                    <div class="categorias__tarjeta-botones">
+                        <button class="categorias__tarjeta-boton">
+                            eliminar
+                        </button><button class="categorias__tarjeta-boton">
+                            editar
+                        </button><button class="categorias__tarjeta-boton">
+                            ver tareas
+                        </button>
+                    </div>
+                </div>
+                <div class="main__categorias-tarjeta">
+                    <h2 class="categorias__tarjeta-h2">
+                        Nombre de Categoria
+                    </h2>
+                    <p class="categorias__tarjeta-p">
+                        descripcion de la categoria en la cual se detalla un poco mas sobre que funcion va a tener
+                    </p>
+                    <div class="categorias__tarjeta-botones">
+                        <button class="categorias__tarjeta-boton">
+                            eliminar
+                        </button><button class="categorias__tarjeta-boton">
+                            editar
+                        </button><button class="categorias__tarjeta-boton">
+                            ver tareas
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="main__tareas">
+                <p class="main__tareas-p">
+                    MIS TAREAS    
+                </p>
+            </section> 
+        </main>
+    </div>
+        <!-- <footer class="footer">
+            <a href="https://web.facebook.com/?_rdc=1&_rdr" target="_blank" class="facebook">
+                <img src="../IMG/svg/facebook.svg" alt="">
+            </a>
+            <a href="https://www.instagram.com/?hl=es-la" target="_blank" class="instagram">
+                <img src="../IMG/svg/instagram.svg" alt="">
+            </a>
+            <a href="https://x.com/?lang=en" target="_blank" class="twitter">
+                <img src="../IMG/svg/twitter-x.svg" alt="">
+            </a>
+            <a href="https://web.whatsapp.com/" target="_blank" class="whatsapp">
+                <img src="../IMG/svg/whatsapp.svg" alt="">
+            </a>
+        </footer> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Modal para buscar -->
+        <div class="modal fade" id="buscar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Buscar Tarea</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="searchForm">
+                            <label for="searchTerm" class="modal__label">Nombre de la Tarea:</label>
+                            <input type="text" id="searchTerm" name="searchTerm" class="modal__input" required>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Buscar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- Modal para Añadir Nueva Tarea -->
+<div id="añadirTareaModal" class="modal fade" tabindex="-1" aria-labelledby="tituloModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="tituloModal">Añadir Nueva Tarea</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <form id="formularioAñadirTarea" method="post" action="añadir_tarea.php">
+                    <div class="row mb-3">
+                        <div class="col-md-12">
+                            <label for="nombreTarea" class="modal__etiqueta">Nombre de la Tarea:</label>
+                            <input type="text" id="nombreTarea" name="nombreTarea" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-12">
+                            <label for="descripcionTarea" class="modal__etiqueta">Descripción:</label>
+                            <textarea id="descripcionTarea" name="descripcionTarea" class="form-control" rows="3" required></textarea>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="fechaVencimiento" class="modal__etiqueta">Fecha de Vencimiento:</label>
+                            <input type="date" id="fechaVencimiento" name="fechaVencimiento" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="prioridadTarea" class="modal__etiqueta">Prioridad:</label>
+                            <select id="prioridadTarea" name="prioridadTarea" class="form-select" required>
+                                <option value="baja">Baja</option>
+                                <option value="media">Media</option>
+                                <option value="alta">Alta</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="estadoTarea" class="modal__etiqueta">Estado:</label>
+                            <select id="estadoTarea" name="estadoTarea" class="form-select" required>
+                                <option value="pendiente">Pendiente</option>
+                                <option value="en progreso">En Progreso</option>
+                                <option value="completada">Completada</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="categoriaId" class="modal__etiqueta">Categoría:</label>
+                            <select id="categoriaId" name="categoriaId" class="form-select" required>
+                                <?php foreach ($categorias as $categoria): ?>
+                                    <option value="<?php echo htmlspecialchars($categoria['id']); ?>"><?php echo htmlspecialchars($categoria['nombre_categoria']); ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-12">
+                            <label for="nuevaCategoriaNombre" class="modal__etiqueta">O crear nueva categoría:</label>
+                            <input type="text" id="nuevaCategoriaNombre" name="nuevaCategoriaNombre" class="form-control" placeholder="Nombre de nueva categoría">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-end">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Añadir Tarea</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Modal del Calendario -->
+    <div class="modal fade modal-calendario" id="calendarioModal" tabindex="-1" aria-labelledby="calendarioModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="calendarioModalLabel">Calendario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="calendario">
+                        <!-- Aquí puedes incrustar un calendario externo o un calendario personalizado -->
+                        <iframe src="https://calendar.google.com/calendar/embed?src=es.mx%23holiday%40group.v.calendar.google.com&ctz=America%2FMexico_City"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+        <!-- Scripts de Vanilla JS Datepicker -->
+        <script src="../JS/CALENDARIO/calendario.js"></script>
+        <script src="../JS/PARTICULAS/particles.min.js"></script>
+        <script src="../JS/PASAR_CATEGORIA/pasar_categoria.js"></script>
+        <script src="../JS/PARTICULAS/particlesjs-config.json"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.0.0/index.global.min.js"></script>
+        </body>
+</body>
+</html>

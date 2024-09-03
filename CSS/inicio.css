@@ -1,0 +1,568 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('../IMG/planeta__fondo.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-color: #f5f5f5;
+    font-family: cursive;
+    overflow: hidden;
+}
+
+/* CONTENEDOR */
+
+.contenedor__pagina{
+    display: flex;
+    height: 100vh;
+    width: 100VW;
+    font-family: cursive;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ASIDE */
+
+
+.aside{
+    width: 5vw; 
+    /* background: #0000008a; */
+    background: #000000c5;
+    padding: 0px
+    color white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: rgba(255, 255, 255, 0.775);
+    cursor: pointer;
+    transition: width 0.8s;
+}
+.aside:hover{
+    width: 16vw;
+    .aside__arriba-perfil-nombre, .aside__enlace-p, .aside__cerrar_sesion-p{
+        display: unset;
+        white-space: nowrap;       /* Evita que el texto se divida en varias líneas */
+        overflow: hidden;          /* Oculta el contenido que se desborda */
+        text-overflow: ellipsis;   /* Muestra puntos suspensivos si el texto es demasiado largo */
+        max-width: 60%; 
+    }
+    .aside__logo-spin-p{
+        display: unset;
+    }
+    .aside__enlace{
+        justify-content: flex-start;
+        padding-left: 26px;
+    }
+    .aside__abajo-cerrar_sesion{
+        justify-content: flex-start;
+        padding-left: 3vw;
+    }
+}
+.aside__arriba{
+    display: flex;
+    flex-direction: column;
+    height: 14.5vh;
+    margin-top: 25px;
+    justify-content: space-between;
+}
+.aside__arriba-perfil{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: rgb(250, 151, 12);
+}
+.aside__arriba-perfil-nombre{
+    display: none;
+}
+.aside__arriba-perfil-imagen{
+    height: 2.3rem;
+    width: 2.3rem;
+}
+.aside__arriba-buscador{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+.aside__arriba-buscador:hover{
+    color: #5939a3;
+}
+.aside__arriba-buscador-imagen{
+    height: 1.2rem;
+    width: 1.2rem;
+}
+
+
+
+
+
+
+.aside__enlaces{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content:  center;
+    height: 50vh;
+}
+.aside__enlace{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    transition: background-color 1s;    
+    justify-content: center;
+    padding: 1rem;
+}   
+.aside__enlace:hover{
+    background: rgba(250, 250, 250, 0.623);
+}
+.aside__enlace-icono{
+}
+.aside__enlace:hover .aside__enlace-icono{
+    animation: spin-enlace 3s ease-in-out 0s infinite alternate running;
+}
+.aside__enlace-p{
+    display: none;
+    margin-bottom: 0;
+}
+
+
+
+
+
+.aside__abajo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 6rem;
+    height: 13.9vh;
+}
+.aside__abajo-cerrar_sesion{
+    display: flex;
+    flex-direction: row;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: center;
+    color: rgb(250, 151, 12);
+    text-decoration: none;
+    font-weight: 200;
+    gap: 1rem;
+
+}
+
+.aside__cerrar_sesion-p{
+    text-decoration: none;
+    display: none;
+}
+.aside__abajo-cerrar_sesion:hover .aside__cerrar_sesion-p{
+    display: none;
+
+}
+.aside__abajo-cerrar_sesion:hover .aside__cerrar_sesion-icono {
+    animation: cerrar 1s linear forwards;
+   }
+@keyframes cerrar{
+    to{
+        scale: 2.5;
+        transform : translateX(1.8vw);
+    }
+}
+.aside__cerrar_sesion-icono{
+
+}
+.aside__abajo-logo{
+    display: flex;
+    height: 20%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.aside__logo-spin{
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    width: 30%;
+    background: #00000000;
+    color: #f5f5f5;
+    height: 50%;
+    text-align: center;
+
+    animation: spin 3s ease-in-out 1s infinite alternate running;
+}
+.aside__logo-spin:hover{
+    animation-play-state: paused;
+}
+.aside__logo-spin-p{
+    display: none;
+}
+
+@keyframes spin{
+    0%{
+
+    }
+    50%{
+        transform: rotate(0);
+        scale: 1.5;
+        border-radius: 50%;
+    }
+    100%{
+        transform: rotate(360deg);
+        scale: 1.5;
+        border-radius: 50%;
+    }
+}
+@keyframes spin-enlace{
+    0%{
+
+    }
+    50%{
+        transform: rotate(0);
+        scale: 1.8;
+    }
+    100%{
+        transform: rotate(360deg);
+        scale: 1.8;
+    }
+}
+
+        /* Estilos adicionales para el modal */
+        .modal-calendario .modal-dialog {
+            max-width: 700px;
+            margin: 1.75rem auto;
+        }
+
+        .modal-calendario .modal-content {
+            background-color: #f9f9f9;
+            border-radius: 15px;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-calendario .modal-header {
+            border-bottom: none;
+            position: relative;
+            padding: 1rem 1.5rem;
+            background-color: #4e73df;
+            color: #fff;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        .modal-calendario .modal-title {
+            font-weight: bold;
+        }
+
+        .modal-calendario .modal-body {
+            padding: 2rem;
+        }
+
+        .modal-calendario .modal-footer {
+            border-top: none;
+            padding: 1rem 1.5rem;
+        }
+
+        .calendario {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .calendario iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+
+/* MAIN */
+
+
+.main{
+    flex-grow: 1;
+    display: grid;
+    grid-template-areas: "calendario categorias tareas"
+                         "recordatorios estadistica tareas";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+}
+
+
+
+
+
+
+/* CALENDARIO */
+
+
+.main__calendario {
+    color: #ef8e8ea7; /* Texto blanco */
+    width: 25vw;
+    height: 50vh;
+    grid-area: calendario;
+    justify-self: center;
+}
+
+#calendar {
+    max-width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #201e1e8a; /* Fondo oscuro para el calendario */
+    border-radius: 10px;
+}
+
+/* Estilos para los días del calendario */
+.fc-daygrid-day {
+    color: #c57711;
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilos para el hover de los días */
+.fc-daygrid-day:hover {
+    background-color: #555; /* Fondo más claro en hover */
+    cursor: pointer; /* Cambia el cursor en hover */
+}
+.fc-day fc-day-fri fc-day-past fc-daygrid-day{
+    width: 20%;
+}
+
+/* Quitar subrayado de los días */
+.fc-daygrid-day a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: inherit; /* Hereda el color del elemento padre */
+}
+
+/* Quitar subrayado de los días de la semana */
+.fc-col-header-cell-cushion {
+    text-decoration: none; /* Elimina el subrayado de los días de la semana */
+    color: #742c2c; /* Asegúrate de que el color del texto sea blanco */
+}
+
+/* Opcional: Ajustar el color y estilo de los días de la semana si es necesario */
+.fc-col-header-cell-cushion {
+    font-weight: bold; /* Opcional: Asegura que los días de la semana sean negritas */
+}
+
+
+
+
+
+
+
+/* RECORDATORIOS */
+
+
+.main__recordatorios{
+    grid-area: recordatorios;
+}
+.recordatiors__contenedor{
+    background-color: #555;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+/* ESTADISTICA */
+
+.main__estadistica{
+    grid-area: estadistica;
+    background-color: #4e73df;
+}
+.estadistica__contenedor{
+    background-repeat: no-repeat;
+    background-image: url('../IMG/');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CATEGORIAS */
+
+
+
+.main__categorias {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch; /* Para un desplazamiento suave en dispositivos iOS */
+    place-self: center;
+    width: 22vw;
+    height: 100%;
+    padding: 0;
+    grid-area: categorias;
+}
+
+.main__categorias-tarjeta {
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: center;
+    box-sizing: border-box;
+    padding: 20px 30px;
+    flex-shrink: 0;
+    width: 22vw;
+    border-radius: 14px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    color: wheat;
+    justify-content: space-between;
+    background-image: url('../IMG/categoria\ ejemplo.jpeg');
+    background-repeat: no-repeat;
+    background-image: cover;
+}
+
+.main__categorias-tarjeta:hover {
+    
+}
+.no-select {
+    user-select: none; /* Evita la selección de texto */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+.categorias__tarjeta-h2{
+
+}
+.categorias__tarjeta-p{
+
+}
+.categorias__tarjeta-botones{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.categorias__tarjeta-boton{
+
+}
+
+
+
+
+
+/* TAREAS */
+
+
+
+
+
+.main__tareas{
+    grid-area: tareas;
+    background-color: rgba(212, 203, 185, 0.692);
+    width: 33vw;
+    height: 100vh;
+    margin: 0;   
+    margin-right: -30px;
+}
+.main__tareas-p{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+
+.footer{
+    display: flex;
+    width: 50%;
+    background: #000000c5;
+}
+
+
+
+
+
+
+
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+
+
+
+
+
+
+/* modales */
+
+
+/* modal para busqueda */
+.fade{
+
+}
+
+
+
+
+
+/* Estilo para el contenedor de partículas */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Asegura que las partículas estén detrás del contenido */
+}

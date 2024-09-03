@@ -1,0 +1,76 @@
+/* Estilos del header */
+.header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 7vh;
+  }
+  
+  .header__logo {
+    text-decoration: none;
+    font-size: 2rem;
+    z-index: 1;
+    color: rgba(255, 40, 40, 0.724);
+    margin-left: 80px;
+  }
+  
+  .header__logo:hover {
+    text-decoration: underline;
+    color: #ff6347;
+  }
+  
+  .header__nav {  
+    display: flex;
+  }
+  
+  .nav__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav__item {
+    margin-right: 94px; /* Aumentar el margen derecho para separar los elementos */
+  }
+  
+  .nav__link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  .nav__link:hover {
+    color: #ff6347; /* Cambiar el color al pasar el cursor */
+    text-decoration: underline;
+  }
+  
+  /* Aside */
+  aside {
+      background-color: #f8f9fa;
+      padding: 1rem;
+      width: 200px;
+      position: fixed;
+      height: 100%;
+      overflow: auto;
+  }
+  
+  aside a {
+      display: block;
+      color: #333;
+      padding: 10px 15px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+  }
+  
+  aside a:hover {
+      background-color: #ddd;
+  }
+  
+  .content {
+      margin-left: 220px;
+      padding: 1rem;
+  }
